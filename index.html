@@ -1,0 +1,131 @@
+<html>
+    <head>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+        <script>
+            $(document).ready(function() {
+                $('select').formSelect();
+            });
+        </script>
+        
+        <style>
+            #main {
+                width: 50%;
+                margin: 0;
+                }
+
+            #instructions {
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                padding: 8px 16px 16px;
+                color: #000;
+                border: 1px solid #A1A1A1;
+                width: 30%;
+                font-size: 16px;
+                font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+                line-height: 1.5;
+                }
+            #instructions h1 {
+                font-size: 32px;
+                font-weight: bold;
+                margin: 0;
+                }
+
+            label {
+                color: #565656 !important;
+                }
+
+            input.submitter {
+                outline: none;
+                width: 100%;
+                border: none;
+                background: #3BBFAC;
+                color: #fff;
+                font-weight: bold;
+                border-radius: 12px;
+                height: 3rem;
+                font-size: 17px;
+                margin: 0 0 24px;
+                }
+        </style>
+    </head>
+    <body>
+        <div class="row" id="main">
+        <div id="instructions">
+            <h1>Instructions</h1>
+            <ol>
+            <li>Add "Jill Jones" to the first name and last name fields respectively.</li>
+            <li>Locate the timezone field and select "Pacific"</li>
+            <li>Add the following password to the password and confirm password fields: 7hPj4Dwe</li>
+            <li>Add the following email address to to the email address field: hello@email.com</li>
+            <li>Press "Submit"</li>
+            </ol>
+        </div>
+            <form class="col s12">
+            <div class="row">
+                <div class="input-field col s6">
+                <input id="first_name" type="text" class="validate" value="Thomas">
+                <label for="first_name">First Name</label>
+                </div>
+                <div class="input-field col s6">
+                <input id="last_name" type="text" class="validate">
+                <label for="last_name">Last Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                <input id="email" type="email" class="validate">
+                <label for="email">Email</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s10">
+                <input id="phone_number" type="tel" class="validate" value="(654) 879-4561">
+                <label for="phone_number">Phone Number</label>
+                </div>
+                <div class="input-field col s2">
+                <input id="extension" type="number" class="validate" value="8402"
+                <label for="extension">Extension</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                <input disabled value="2048" id="disabled" type="text" class="validate">
+                <label for="disabled">User ID</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                <input id="password" type="password" class="validate">
+                <label for="password">Password</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                <input id="confirm_password" type="password" class="validate">
+                <label for="confirm_password">Confirm Password</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                <select name="timezone">
+                    <option value="" disabled selected>Choose your timezone</option>
+                    <option value="1">(UTC-10:00) Hawaii</option>
+                    <option value="2">(UTC-09:00) Alaska</option>
+                    <option value="3">(UTC-08:00) Pacific Time (US &amp; Canada)</option>
+                    <option value="4">(UTC-07:00) Arizona</option>
+                    <option value="5">(UTC-07:00) Mountain Time (US &amp; Canada)</option>
+                    <option value="6">(UTC-06:00) Central Time (US &amp; Canada)</option>
+                    <option value="7">(UTC-05:00) Eastern Time (US &amp; Canada)</option>
+                </select>
+                <label for="timezone" id="timezone">Timezone</label>
+                </div>
+            </div>
+            <input type="submit" value="Submit" class="submitter">
+            </form>
+        </div>
+    </body>
+</html>
